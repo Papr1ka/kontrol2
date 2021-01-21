@@ -1,0 +1,9 @@
+<form>
+    <input type="text" name="city" [(ngModel)] = "data.city" placeholder="город">
+    <input type="text" name="country" [(ngModel)] = "data.country" placeholder="страна">
+    <input type="button" value="сохранить" (click) = "post(data)">
+</form>
+<div class="data" *ngFor = "let item of items">
+    <p>Город {{item.city}}</p>
+    <p>Страна {{item.city}}</p>
+</div>

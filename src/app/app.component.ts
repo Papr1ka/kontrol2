@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MockService } from './services/mock.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,29 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kr';
+  constructor() {
+    if (localStorage.getItem("admin")) {
+      console.log("admin is alreay exists")
+    } else {
+      let admin = {
+        "login": "admin",
+        "password": "admin"
+      }
+      let jsonAdmin = JSON.stringify(admin)
+      localStorage.setItem("admin", jsonAdmin)
+      console.log("admin was created")
+    }
+
+    if (localStorage.getItem("user")) {
+      console.log("user is alreay exists")
+    } else {
+      let user = {
+        "login": "login",
+        "password": "password"
+      }
+      let jsonUser = JSON.stringify(user)
+      localStorage.setItem("user", jsonUser)
+      console.log("user was created")
+    }
+  }
 }

@@ -1,0 +1,7 @@
+<input type="text" name="username" [(ngModel)] = "data.username">
+<input type="text" name="password" [(ngModel)] = "data.password">
+<input type="submit" (click) = "check(data)">
+
+<div class="info" *ngIf="info != ''">
+    <div style = "color: green;">{{info}}</div>
+</div>

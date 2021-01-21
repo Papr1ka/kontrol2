@@ -1,0 +1,19 @@
+<div class="window"><router-outlet></router-outlet></div>
+<header>
+    <nav>
+        <div class="title">
+            <a>ADMIN</a>
+        </div>
+        <div class = "inner_nav">
+            <div routerLinkActive="active" [routerLinkActiveOptions] = "{ exact : true }">
+                <a routerLink="./">AdminChange</a>
+            </div>
+            <div routerLinkActive="active">
+                <a routerLink="./cities">Cities</a>
+            </div>
+            <div routerLinkActive="active">
+                <a routerLink="./editor">Editor</a>
+            </div>
+        </div>
+    </nav>
+</header>
